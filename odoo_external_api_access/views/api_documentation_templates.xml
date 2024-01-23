@@ -1,0 +1,63 @@
+<odoo>
+    <data>
+
+        <!-- API Documentation Template -->
+        <template id="api_documentation_template" name="API Documentation">
+            <t t-call="web.html_container">
+                <t t-set="head">
+                    <link rel="stylesheet" type="text/css" href="/odoo_external_api_access/static/src/css/api_styles.css"/>
+                    <script type="text/javascript" src="/odoo_external_api_access/static/src/js/api_interactive_explorer.js"></script>
+                </t>
+                <div class="api_documentation">
+                    <div class="header">
+                        <h1>API Documentation</h1>
+                        <div class="export_button">
+                            <button type="button" id="apiDocumentationExportButton">Export Documentation</button>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="sidebar">
+                            <input type="text" placeholder="Search..." class="search_input"/>
+                            <ul id="apiEndpointList">
+                                <!-- API endpoints will be loaded here -->
+                            </ul>
+                        </div>
+                        <div class="main_content" id="apiExplorerContainer">
+                            <!-- API exploration and execution environment will be loaded here -->
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </template>
+
+        <!-- API Endpoint Execution Template -->
+        <template id="api_endpoint_execution_template" name="API Endpoint Execution">
+            <div class="api_execution">
+                <form id="apiRequestForm">
+                    <div class="form_group">
+                        <label for="endpoint">Endpoint:</label>
+                        <input type="text" id="endpoint" name="endpoint" readonly="readonly"/>
+                    </div>
+                    <div class="form_group">
+                        <label for="parameters">Parameters:</label>
+                        <textarea id="parameters" name="parameters"></textarea>
+                    </div>
+                    <div class="form_group">
+                        <button type="button" id="apiEndpointExecuteButton">Execute</button>
+                    </div>
+                </form>
+                <div class="response_display" id="apiResponseDisplay">
+                    <!-- Response will be displayed here -->
+                </div>
+            </div>
+        </template>
+
+        <!-- API Endpoint List Item Template -->
+        <template id="api_endpoint_list_item_template">
+            <li class="api_endpoint_item">
+                <a t-attf-href="#{endpoint.action}" t-esc="endpoint.name"></a>
+            </li>
+        </template>
+
+    </data>
+</odoo>

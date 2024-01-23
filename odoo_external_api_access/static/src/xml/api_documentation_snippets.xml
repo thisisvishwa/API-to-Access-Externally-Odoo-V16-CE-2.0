@@ -1,0 +1,61 @@
+<templates>
+    <t t-name="ApiDocumentation.Explorer">
+        <div id="apiExplorerContainer" class="api-explorer-container">
+            <div class="api-endpoint-list">
+                <t t-foreach="endpoints" t-as="endpoint">
+                    <div class="api-endpoint-item">
+                        <h3 class="api-endpoint-title">
+                            <t t-esc="endpoint.name"/>
+                        </h3>
+                        <div class="api-endpoint-description">
+                            <t t-esc="endpoint.description"/>
+                        </div>
+                        <button type="button" class="api-endpoint-explore-btn" t-att-data-endpoint-id="endpoint.id">
+                            Explore
+                        </button>
+                    </div>
+                </t>
+            </div>
+            <div class="api-request-form" id="apiRequestForm">
+                <t t-call="ApiDocumentation.RequestForm"/>
+            </div>
+            <div class="api-response-display" id="apiResponseDisplay"></div>
+        </div>
+    </t>
+
+    <t t-name="ApiDocumentation.RequestForm">
+        <form class="api-form">
+            <t t-foreach="request_parameters" t-as="param">
+                <label class="api-form-label" t-att-for="param.name">
+                    <t t-esc="param.name"/>
+                </label>
+                <input type="text" t-att-id="param.name" t-att-name="param.name" class="api-form-input" t-att-placeholder="param.placeholder"/>
+            </t>
+            <button type="button" class="api-form-submit" id="apiEndpointExecuteButton">
+                Execute
+            </button>
+        </form>
+    </t>
+
+    <t t-name="ApiDocumentation.ResponseDisplay">
+        <div class="api-response">
+            <pre class="api-response-content">
+                <code t-esc="response"/>
+            </pre>
+        </div>
+    </t>
+
+    <t t-name="ApiDocumentation.EndpointItem">
+        <div class="api-endpoint-item">
+            <h3 class="api-endpoint-title">
+                <t t-esc="endpoint.name"/>
+            </h3>
+            <div class="api-endpoint-description">
+                <t t-esc="endpoint.description"/>
+            </div>
+            <button type="button" class="api-endpoint-explore-btn" t-att-data-endpoint-id="endpoint.id">
+                Explore
+            </button>
+        </div>
+    </t>
+</templates>

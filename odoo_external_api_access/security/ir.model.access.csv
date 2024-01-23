@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_api_documentation_user,api.documentation.user,model_api_documentation,base.group_user,1,0,0,0
+access_api_documentation_manager,api.documentation.manager,model_api_documentation,base.group_system,1,1,1,1
+access_api_endpoint_user,api.endpoint.user,model_api_endpoint,base.group_user,1,0,0,0
+access_api_endpoint_manager,api.endpoint.manager,model_api_endpoint,base.group_system,1,1,1,1
+access_api_history_user,api.history.user,model_api_history,base.group_user,1,0,0,0
+access_api_history_manager,api.history.manager,model_api_history,base.group_system,1,1,1,1
+access_api_favorites_user,api.favorites.user,model_api_favorites,base.group_user,1,0,0,0
+access_api_favorites_manager,api.favorites.manager,model_api_favorites,base.group_system,1,1,1,1

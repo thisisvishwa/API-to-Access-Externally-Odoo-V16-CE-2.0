@@ -1,0 +1,73 @@
+<odoo>
+    <data>
+
+        <!-- API Documentation Tree View -->
+        <record id="view_api_documentation_tree" model="ir.ui.view">
+            <field name="name">api.documentation.tree</field>
+            <field name="model">api.documentation</field>
+            <field name="arch" type="xml">
+                <tree string="API Documentation">
+                    <field name="name"/>
+                    <field name="description"/>
+                    <field name="version"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- API Documentation Form View -->
+        <record id="view_api_documentation_form" model="ir.ui.view">
+            <field name="name">api.documentation.form</field>
+            <field name="model">api.documentation</field>
+            <field name="arch" type="xml">
+                <form string="API Documentation">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="description"/>
+                            <field name="version"/>
+                            <field name="active"/>
+                        </group>
+                        <notebook>
+                            <page string="Endpoints">
+                                <field name="endpoint_ids">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="route"/>
+                                        <field name="method"/>
+                                        <field name="active"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Settings">
+                                <group>
+                                    <field name="customization_options"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- API Documentation Action -->
+        <record id="action_api_documentation" model="ir.actions.act_window">
+            <field name="name">API Documentation</field>
+            <field name="res_model">api.documentation</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_api_documentation_tree"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Define and manage your API documentation here.
+                </p>
+            </field>
+        </record>
+
+        <!-- API Documentation Menu Item -->
+        <menuitem id="menu_api_documentation" name="API Documentation"
+                  parent="base.menu_custom"
+                  action="action_api_documentation"
+                  sequence="10"/>
+
+    </data>
+</odoo>
