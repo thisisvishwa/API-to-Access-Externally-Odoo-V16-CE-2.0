@@ -1,0 +1,48 @@
+<odoo>
+    <data noupdate="1">
+        <!-- API Access Groups -->
+        <record id="group_api_user" model="res.groups">
+            <field name="name">API User</field>
+            <field name="category_id" ref="base.module_category_hidden"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="group_api_manager" model="res.groups">
+            <field name="name">API Manager</field>
+            <field name="category_id" ref="base.module_category_hidden"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="implied_ids" eval="[(4, ref('odoo_external_api_access.group_api_user'))]"/>
+        </record>
+
+        <!-- API Documentation Settings -->
+        <record id="api_documentation_settings" model="ir.config_parameter">
+            <field name="key">odoo_external_api_access.documentation_settings</field>
+            <field name="value">Default Settings</field>
+        </record>
+
+        <!-- API Endpoint Example -->
+        <record id="api_endpoint_example" model="api.endpoint">
+            <field name="name">Example Endpoint</field>
+            <field name="description">An example API endpoint for demonstration purposes.</field>
+            <field name="method">GET</field>
+            <field name="route">/api/example</field>
+            <field name="model_id" ref="base.model_res_partner"/>
+            <field name="api_documentation_id" ref="api_documentation_settings"/>
+        </record>
+
+        <!-- API History Example -->
+        <record id="api_history_example" model="api.history">
+            <field name="name">Example History Record</field>
+            <field name="endpoint_id" ref="api_endpoint_example"/>
+            <field name="request_data">{'param1': 'value1'}</field>
+            <field name="response_data">{'result': 'success'}</field>
+            <field name="status_code">200</field>
+        </record>
+
+        <!-- API Favorites Example -->
+        <record id="api_favorite_example" model="api.favorites">
+            <field name="name">Example Favorite Endpoint</field>
+            <field name="endpoint_id" ref="api_endpoint_example"/>
+            <field name="user_id" ref="base.user_root"/>
+        </record>
+    </data>
+</odoo>

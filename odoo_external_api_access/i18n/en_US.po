@@ -1,0 +1,138 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo External API Access Module 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-01 00:00+0000\n"
+"PO-Revision-Date: 2023-04-01 00:00+0000\n"
+"Last-Translator: Vishwa G\n"
+"Language-Team: English\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: odoo_external_api_access
+#: model:ir.model,name:odoo_external_api_access.model_api_documentation
+msgid "API Documentation"
+msgstr ""
+
+#. module: odoo_external_api_access
+#: model:ir.model,name:odoo_external_api_access.model_api_endpoint
+msgid "API Endpoint"
+msgstr ""
+
+#. module: odoo_external_api_access
+#: model:ir.model,name:odoo_external_api_access.model_api_history
+msgid "API History"
+msgstr ""
+
+#. module: odoo_external_api_access
+#: model:ir.model,name:odoo_external_api_access.model_api_favorites
+msgid "API Favorites"
+msgstr ""
+
+#. module: odoo_external_api_access
+#: code:addons/odoo_external_api_access/models/api_documentation.py:0
+msgid "API Documentation Generation"
+msgstr ""
+
+#. module: odoo_external_api_access
+#: code:addons/odoo_external_api_access/controllers/main.py:0
+msgid "Interactive API Exploration"
+msgstr ""
+
+#. module: odoo_external_api_access
+#: code:addons/odoo_external_api_access/controllers/main.py:0
+msgid "Endpoint Execution"
+msgstr ""
+
+#. module: odoo_external_api_access
+#: code:addons/odoo_external_api_access/views/api_documentation_views.xml:0
+msgid "Customization Options"
+msgstr ""
+
+#. module: odoo_external_api_access
+#: code:addons/odoo_external_api_access/views/api_documentation_views.xml:0
+msgid "Backend Configuration"
+msgstr ""
+
+#. module: odoo_external_api_access
+#: code:addons/odoo_external_api_access/security/security.xml:0
+msgid "API Security Controls"
+msgstr ""
+
+#. module: odoo_external_api_access
+#: code:addons/odoo_external_api_access/static/src/js/api_interactive_explorer.js:0
+msgid "User Interface Enhancements"
+msgstr ""
+
+#. module: odoo_external_api_access
+#: code:addons/odoo_external_api_access/controllers/main.py:0
+msgid "API Request Simulation"
+msgstr ""
+
+#. module: odoo_external_api_access
+#: code:addons/odoo_external_api_access/static/src/js/api_interactive_explorer.js:0
+msgid "Response Visualization"
+msgstr ""
+
+#. module: odoo_external_api_access
+#: code:addons/odoo_external_api_access/controllers/main.py:0
+msgid "Detailed Parameter Information"
+msgstr ""
+
+#. module: odoo_external_api_access
+#: code:addons/odoo_external_api_access/controllers/main.py:0
+msgid "Code Generation Support"
+msgstr ""
+
+#. module: odoo_external_api_access
+#: code:addons/odoo_external_api_access/controllers/main.py:0
+msgid "Intuitive Error Handling"
+msgstr ""
+
+#. module: odoo_external_api_access
+#: code:addons/odoo_external_api_access/models/api_documentation.py:0
+msgid "API History and Favorites"
+msgstr ""
+
+#. module: odoo_external_api_access
+#: code:addons/odoo_external_api_access/controllers/main.py:0
+msgid "Documentation Export"
+msgstr ""
+
+#. module: odoo_external_api_access
+#: code:addons/odoo_external_api_access/controllers/main.py:0
+msgid "Advanced Search and Filtering"
+msgstr ""
+
+#. module: odoo_external_api_access
+#: code:addons/odoo_external_api_access/security/security.xml:0
+msgid "User Permissions"
+msgstr ""
+
+#. module: odoo_external_api_access
+#: code:addons/odoo_external_api_access/views/api_documentation_views.xml:0
+msgid "Global Configuration Options"
+msgstr ""
+
+#. module: odoo_external_api_access
+#: code:addons/odoo_external_api_access/static/src/js/api_interactive_explorer.js:0
+msgid "Cross-Browser Compatibility"
+msgstr ""
+
+#. module: odoo_external_api_access
+#: code:addons/odoo_external_api_access/doc/index.rst:0
+msgid "Comprehensive Documentation"
+msgstr ""
+
+#. module: odoo_external_api_access
+#: code:addons/odoo_external_api_access/doc/developer_guidelines.rst:0
+msgid "Developer Guidelines"
+msgstr ""
+
+#. module: odoo_external_api_access
+#: code:addons/odoo_external_api_access/tests/test_api_documentation.py:0
+msgid "Testing"
+msgstr ""
